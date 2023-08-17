@@ -47,7 +47,11 @@ let newInventoryYearBuilt = [1922, 2011, 1975, 2002, 1965, 1951]
 let typeS1Count = 0;
 let lorrieCount = 0;
 
-/* let i = 0;
+/*  This is commented out because it was just a while loop in order to learn them better,
+but I wanted to show you a better wayto write concise code below,
+by including bot 'if' statements
+
+let i = 0;
 
 while (i < newInventoryCarModels.length) {
     console.log(newInventoryCarModels[i])
