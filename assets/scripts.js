@@ -46,6 +46,7 @@ let newInventoryCarTypes = ['StockCar', 'Refrigerator', 'StockCar', 'Lorrie', 'L
 let newInventoryYearBuilt = [1922, 2011, 1975, 2002, 1965, 1951]
 let typeS1Count = 0;
 let lorrieCount = 0;
+let numberOfCars = 12;
 
 /*  This is commented out because it was just a while loop in order to learn them better,
 but I wanted to show you a better wayto write concise code below,
@@ -60,7 +61,7 @@ while (i < newInventoryCarModels.length) {
     }
     i++
 }
- */
+
 
 for (let i = 0; i < newInventoryCarTypes.length; i++) {
     console.log(newInventoryCarTypes[i])
@@ -71,6 +72,57 @@ for (let i = 0; i < newInventoryCarTypes.length; i++) {
         typeS1Count++
     }
 }
-
+*/
+/*
 console.log(`Number of S1 Cars is: ${typeS1Count}`)
 console.log(`Number of Lorries is: ${lorrieCount}`)
+*/
+
+function carCounter(preExistingCars) {
+    console.log(preExistingCars)
+    let typeS1Count = 0;
+    let lorrieCount = 0;
+    let totalCars = lorrieCount + typeS1Count + preExistingCars
+    for (let i = 0; i < newInventoryCarTypes.length; i++) {
+        console.log(newInventoryCarTypes[i])
+        if (newInventoryCarTypes[i] === 'Lorrie') {
+            lorrieCount++
+        }
+        if (newInventoryCarModels[i] === 'S1') {
+            typeS1Count++
+        }
+    }
+    console.log(`Number of S1 Cars is: ${typeS1Count}`)
+    console.log(`Number of Lorries is: ${lorrieCount}`)
+    console.log(`Previous total number of cars was: ${numberOfCars}`)
+    console.log(`Total number of cars is: ${lorrieCount + typeS1Count + preExistingCars}`)
+    numberOfCars = totalCars
+    return totalCars
+
+}
+
+let totalCars = carCounter(numberOfCars)
+console.log(totalCars)
+
+/* 
+function truckCounter() {
+    function carCounter() {
+        for (let i = 0; i < newInventoryCarTypes.length; i++) {
+            console.log(newInventoryCarTypes[i])
+            if (newInventoryCarTypes[i] === 'Lorrie') {
+                lorrieCount++
+            }
+            if (newInventoryCarModels[i] === 'S1') {
+                typeS1Count++
+            }
+        }
+        console.log(`Number of S1 Cars is: ${typeS1Count}`)
+        console.log(`Number of Lorries is: ${lorrieCount}`)
+    }
+} 
+
+truckCounter()
+*/
+
+
+
